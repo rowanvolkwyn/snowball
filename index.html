@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowball</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div>
+        <h1>Snowball</h1>
+        <form id="calculator-form">
+            <label for="loan-amount">Loan Amount:</label>
+            <input type="number" id="loan-amount" name="loan-amount" required>
+            <label for="loan-term">Loan Term:</label>
+            <input type="number" id="loan-term" name="loan-term" required>
+            <label for="interest-rate">Loan Amount:</label>
+            <input type="number" id="interest-rate" name="interest-rate" required>
+            <label for="repayment-frequency">Loan Amount:</label>
+            <select id="repayment-frequency" name="repayment-frequency" required>
+                <option value="weekly">Weekly</option>
+                <option value="fortnightly">Fortnightly</option>
+                <option value="monthly">Monthly</option>
+            </select>
+        </form>
+        <div id="results">
+            <button>Calculate</button>
+            <h2>Amount</h2>
+            <h3>Per Period</h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
