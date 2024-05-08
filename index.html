@@ -8,25 +8,24 @@
 </head>
 <body>
     <div>
-        <h1>Snowball</h1>
+        <h1 id="answer">Snowball</h1>
         <form id="calculator-form">
             <label for="loan-amount">Loan Amount:</label>
             <input type="number" id="loan-amount" name="loan-amount" required>
-            <label for="loan-term">Loan Term:</label>
-            <input type="number" id="loan-term" name="loan-term" required>
-            <label for="interest-rate">Loan Amount:</label>
-            <input type="number" id="interest-rate" name="interest-rate" required>
-            <label for="repayment-frequency">Loan Amount:</label>
+            <label for="loan-term">Loan Term (years):</label>
+            <input type="number" id="loan-term" name="loan-term" max='50' required>
+            <label for="interest-rate">Interest Rate:</label>
+            <input type="number" id="interest-rate" name="interest-rate" max='20' required>
+            <label for="repayment-frequency">Repayment Frequency:</label>
             <select id="repayment-frequency" name="repayment-frequency" required>
                 <option value="weekly">Weekly</option>
                 <option value="fortnightly">Fortnightly</option>
                 <option value="monthly">Monthly</option>
             </select>
+            <button type="button" onclick="calculateRepayment()">Calculate</button>
         </form>
         <div id="results">
-            <button>Calculate</button>
-            <h2>Amount</h2>
-            <h3>Per Period</h3>
+            <h2 id="amount">Amount</h2>
         </div>
     </div>
 
