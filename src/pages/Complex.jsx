@@ -1,7 +1,9 @@
+import { calculateExtraRepayments } from "../javascript/calculateExtraRepayments";
+
 function Complex() {
     return (
-        <>
-            <h1 id="answer">Snowball</h1>
+        <div id='complex'>
+            <h1>Extra Repayment Calculator</h1>
             <form id="calculator-form">
                 <label htmlFor="loan-amount">Loan Amount:</label>
                 <input type="number" id="loan-amount" name="loan-amount" required />
@@ -15,12 +17,14 @@ function Complex() {
                     <option value="fortnightly">Fortnightly</option>
                     <option value="monthly">Monthly</option>
                 </select>
-                <button type="button">Calculate</button>
+                <label htmlFor="extra-payment">Extra Payments:</label>
+                <input type="number" id="extra-payment" name="iextra-payment" max='20' required />
+                <button type="button" onClick={calculateExtraRepayments}>Calculate</button>
             </form>
             <div id="results">
-                <h2 id="amount">Amount</h2>
+                <h2 id="amount"></h2>
             </div>
-        </>
+        </div>
     );
 }
 

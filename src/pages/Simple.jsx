@@ -4,7 +4,7 @@ function Simple() {
 
     return (
         <div id='simple'>
-            <h1 id="answer">Snowball</h1>
+            <h1>Mortgage Repayment Calculator</h1>
             <form id="calculator-form">
                 <label htmlFor="loan-amount">Loan Amount:</label>
                 <input type="number" id="loan-amount" name="loan-amount" required />
@@ -21,7 +21,7 @@ function Simple() {
                 <button type="button" onClick={calculateRepayment}>Calculate</button>
             </form>
             <div id="results">
-                <h2 id="amount">Amount</h2>
+                <h2 id="amount"></h2>
             </div>
         </div>
     );
