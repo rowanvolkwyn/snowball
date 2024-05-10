@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --primary: rgb(59, 134, 192);
+  --secondary: rgb(26,44,59);
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+  background: var(--primary);
+}
+
+* {
+  color: white;
+  margin: 0;
+}
+
+p {
+  margin: 20px 0;
+}
+
+button {
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+  background-color: var(--secondary);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+input, select {
+  border: 0;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 4px 8px;
+  color: var(--secondary);
+}
+
+/* NavBar */
+#navbar {
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Simple */
+#simple {
+  width: 50%;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#calculator-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#simple h1, #simple h2 {
+  margin: auto;
+  text-align: center;
+}
+
+#simple label, #simple input, #simple select, #simple button {
+  width: 40%;
+  margin: auto
+}
+
+#simple button {
+  font-size: 1.2em;
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
