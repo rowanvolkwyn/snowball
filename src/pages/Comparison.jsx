@@ -1,6 +1,8 @@
 import { calculateTotalNetWorth } from "../javascript/calculateTotalNetWorth";
+import { updatePercentage } from "../javascript/functions";
 
 function Comparison() {
+
     return (
         <div id='comparison'>
             <h1>Invest vs Payoff Calculator</h1>
@@ -13,8 +15,8 @@ function Comparison() {
                     <input type="number" id="loan-term" name="loan-term" max='50' required />
                     <label htmlFor="interest-rate">Interest Rate:</label>
                     <input type="number" id="interest-rate" name="interest-rate" max='20' required />
-                    <label htmlFor="growth-rate">Expected Growth Rate:</label>
-                    <input type="number" id="growth-rate" name="growth-rate" max='100' required />
+                    <label htmlFor="house-growth-rate">Expected Growth Rate:</label>
+                    <input type="number" id="house-growth-rate" name="house-growth-rate" max='100' required />
                 </form>
                 <form id="comparison-form">
                     <h2>Investment</h2>
@@ -24,8 +26,8 @@ function Comparison() {
                     <input type="number" id="regular-deposit" name="regular-deposit" required />
                     <label htmlFor="investment-term">Investment Term (years):</label>
                     <input type="number" id="investment-term" name="investment-term" max='50' required />
-                    <label htmlFor="growth-rate">Expected Growth Rate:</label>
-                    <input type="number" id="growth-rate" name="growth-rate" max='100' required />
+                    <label htmlFor="investment-growth-rate">Expected Growth Rate:</label>
+                    <input type="number" id="investment-growth-rate" name="investment-growth-rate" max='100' required />
                 </form>
             </div>
             <div id="results">
@@ -33,17 +35,22 @@ function Comparison() {
                     <label htmlFor="amount-available">Total Amount Available:</label>
                     <input type="number" id="amount-available" name="amount-available" required />
                     <label htmlFor="repayment-frequency">Repayment Frequency:</label>
-                    <select id="deposit-frequency" name="deposit-frequency" required >
+                    <select id="repayment-frequency" name="repayment-frequency" required >
                         <option value="weekly">Weekly</option>
                         <option value="fortnightly">Fortnightly</option>
                         <option value="monthly">Monthly</option>
                     </select>
                     <label htmlFor="invest-percentage">Percentage to Invest:</label>
-                    <input type="range" id="invest-percentage" name="invest-percentage" min="0" max="20" required />
-                    <output for="invest-percentage" onforminput=""/>
+                    <input type="range" id="invest-percentage" name="invest-percentage" min="0" max="20" onInput={updatePercentage} required />
+                    <button type="button" onClick={calculateTotalNetWorth}>Calculate</button>
                 </form>
-                <button type="button" onClick={calculateTotalNetWorth}>Calculate</button>
                 <h2 id="amount"></h2>
+            </div>
+            <div id="calculated-amounts">
+                <p>Amount investing</p>
+                <p id='investing'></p>
+                <p>Amount paying off</p>
+                <p id='repaying'></p>
             </div>
         </div>
     );

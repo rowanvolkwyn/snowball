@@ -31,4 +31,6 @@ export function calculateRepayment() {
     } else {
         amount.innerHTML = 'Please choose a valid repayment frequency.';
     };
+    console.log(calculatedRepayment);
+    return calculatedRepayment;
 };

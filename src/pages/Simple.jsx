@@ -13,7 +13,7 @@ function Simple() {
                 <label htmlFor="interest-rate">Interest Rate:</label>
                 <input type="number" id="interest-rate" name="interest-rate" max='20' required />
                 <label htmlFor="repayment-frequency">Repayment Frequency:</label>
-                <select id="repayment-frequency" name="repayment-frequency" required >
+                <select className='frequency' id="repayment-frequency" name="repayment-frequency" required >
                     <option value="weekly">Weekly</option>
                     <option value="fortnightly">Fortnightly</option>
                     <option value="monthly">Monthly</option>
