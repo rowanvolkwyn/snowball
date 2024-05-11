@@ -6,6 +6,7 @@ function Navbar() {
                 <NavLink to='/'>Simple Calculator</NavLink>
                 <NavLink to='/complex'>Complex Calculator</NavLink>
                 <NavLink to='/investment'>Investment Calculator</NavLink>
+                <NavLink to='/comparison'>Comparison Calculator</NavLink>
         </div>
     )
 }
