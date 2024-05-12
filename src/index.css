@@ -104,10 +104,20 @@ button {
   justify-content: center;
 }
 
-#results {
-  width: 60%;
+#net-worth-results {
+  width: 80%;
   margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#static {
   text-align: right;
+}
+
+#dynamic {
+  text-align: left;
 }
 
 #calculated-amounts {

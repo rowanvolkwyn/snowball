@@ -50,12 +50,12 @@ export function calculateTotalNetWorth() {
             const extraContributionTotal = annualInvestment * ((Math.pow(1 + (investmentGrowthRate / 100), extraWeeks / periods) - 1) / (investmentGrowthRate / 100));
             const netWorth = initialTotal + contributionTotal + extraContributionTotal;
 
-            document.getElementById('repayment').innerHTML = `Mortgage Repayment: $${calculatedRepayment}`;
-            document.getElementById('extra-repayment').innerHTML = `Extra Repayment: $${investable - Math.round(investable * (investedPercentage / 20))}`;
-            document.getElementById('time-to-payoff').innerHTML = `Time to Payoff: ${years} years and ${weeks} weeks`;
-            document.getElementById('regular-investment').innerHTML = `Weekly Investing: $${Math.round(investable * (investedPercentage / 20))}`;
-            document.getElementById('extra-investment').innerHTML = `Weekly Investing after Mortgage: $${Math.round(investable * (investedPercentage / 20))}`;
-            document.getElementById('net-worth').innerHTML = `Net Worth: $${Math.round(netWorth)}`;
+            document.getElementById('repayment').innerHTML = `$${calculatedRepayment}`;
+            document.getElementById('extra-repayment').innerHTML = `$${investable - Math.round(investable * (investedPercentage / 20))}`;
+            document.getElementById('time-to-payoff').innerHTML = `${years} years and ${weeks} weeks`;
+            document.getElementById('regular-investment').innerHTML = `$${Math.round(investable * (investedPercentage / 20))}`;
+            document.getElementById('extra-investment').innerHTML = `$${availableToInvest}`;
+            document.getElementById('net-worth').innerHTML = `$${Math.round(netWorth)}`;
 
         } 
 

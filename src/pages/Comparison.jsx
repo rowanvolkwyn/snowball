@@ -47,13 +47,23 @@ function Comparison() {
                 </div>
                 <button type="button" onClick={calculateTotalNetWorth}>Calculate</button>
             </form>
-            <div id='results'>
-                <p id='repayment'>Mortgage Repayment:</p>
-                <p id='extra-repayment'>Extra Repayment:</p>
-                <p id='time-to-payoff'>Time to Payoff:</p>
-                <p id='regular-investment'>Weekly Investing:</p>
-                <p id='extra-investment'>Weekly Investing after Mortgage:</p>
-                <p id='net-worth'><strong>Total Net Worth: </strong></p>
+            <div id='net-worth-results'>
+                <div id='static'>
+                    <p>Mortgage Repayment:</p>
+                    <p>Extra Repayment:</p>
+                    <p>Time to Payoff:</p>
+                    <p>Weekly Investing:</p>
+                    <p>Weekly Investing after Mortgage:</p>
+                    <p><strong>Total Net Worth: </strong></p>
+                </div>
+                <div id='dynamic'>
+                    <p id='repayment'></p>
+                    <p id='extra-repayment'></p>
+                    <p id='time-to-payoff'></p>
+                    <p id='regular-investment'></p>
+                    <p id='extra-investment'></p>
+                    <p><strong id='net-worth'></strong></p>
+                </div>
             </div>
             <h2 id="amount"></h2>
         </div>
