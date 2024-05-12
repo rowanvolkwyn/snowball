@@ -1,5 +1,4 @@
 import { calculateRepayment } from "../javascript/calculateRepayment";
-
 function Simple() {
 
     return (
