@@ -1,7 +1,13 @@
+import { calculateRepayment } from "../javascript/calculateRepayment";
 import { calculateTotalNetWorth } from "../javascript/calculateTotalNetWorth";
-import { updatePercentage } from "../javascript/functions";
+import { updatePercentage } from "../javascript/updatePercentage";
 
 function Comparison() {
+
+    function handleChange() {
+        updatePercentage();
+        calculateTotalNetWorth();
+    }
 
     return (
         <div id='comparison'>
@@ -19,8 +25,8 @@ function Comparison() {
                 <input type="number" id="starting-amount" name="starting-amount" required />
                 <label htmlFor="investment-growth-rate">Expected Growth Rate:</label>
                 <input type="number" id="investment-growth-rate" name="investment-growth-rate" max='100' required />
-                <label htmlFor="amount-available">Total Amount Available:</label>
-                <input type="number" id="amount-available" name="amount-available" required />
+                <label htmlFor="amount-available">Available to invest:</label>
+                <input type="number" id="amount-available" name="amount-available" onInput={updatePercentage} required />
                 <label htmlFor="repayment-frequency">Repayment Frequency:</label>
                 <select id="repayment-frequency" name="repayment-frequency" required >
                     <option value="weekly">Weekly</option>
@@ -28,15 +34,27 @@ function Comparison() {
                     <option value="monthly">Monthly</option>
                 </select>
                 <label htmlFor="invest-percentage">Percentage to Invest:</label>
-                <input type="range" id="invest-percentage" name="invest-percentage" min="0" max="20" onInput={updatePercentage} required />
+                <input type="range" id="invest-percentage" name="invest-percentage" min="0" max="20" onInput={handleChange} required />
                 <div id="calculated-amounts">
-                    <p>Amount investing</p>
-                    <p id='investing'></p>
-                    <p>Amount paying off</p>
-                    <p id='repaying'></p>
+                    <div className="left">
+                        <p>Loan</p>
+                        <p id='repaying'></p>
+                    </div>
+                    <div className="right">
+                        <p>Investing</p>
+                        <p id='investing'></p>
+                    </div>
                 </div>
                 <button type="button" onClick={calculateTotalNetWorth}>Calculate</button>
             </form>
+            <div id='results'>
+                <p id='repayment'>Mortgage Repayment:</p>
+                <p id='extra-repayment'>Extra Repayment:</p>
+                <p id='time-to-payoff'>Time to Payoff:</p>
+                <p id='regular-investment'>Weekly Investing:</p>
+                <p id='extra-investment'>Weekly Investing after Mortgage:</p>
+                <p id='net-worth'><strong>Total Net Worth: </strong></p>
+            </div>
             <h2 id="amount"></h2>
         </div>
     );

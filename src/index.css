@@ -17,7 +17,7 @@ body {
 }
 
 p {
-  margin: 20px 0;
+  margin: 0;
 }
 
 button {
@@ -104,17 +104,23 @@ button {
   justify-content: center;
 }
 
-#results label, #results input, #results button {
-  width: 80%;
+#results {
+  width: 60%;
+  margin: auto;
+  text-align: right;
+}
+
+#calculated-amounts {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
   margin: auto;
 }
 
-#results button {
-  margin-top: 20px;
-  width: 30%;
+#calculated-amounts p {
+  text-align: center;
 }
 
-#results select {
-  width: 82%;
-  margin: auto;
+#net-worth {
+  margin: 5px 0;
 }
