@@ -70,10 +70,6 @@ export function calculateExtraRepayments() {
            // Update the DOM
            amount.innerHTML = `By paying $${extraPayment} extra per week, your loan will be repayed in ${years} 
            years and ${months} months instead of ${loanTerm} years.`;
-        } else {
-            amount.innerHTML = 'Please choose a valid repayment frequency.';
         };
     }
-
-    
 };

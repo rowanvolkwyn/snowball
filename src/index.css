@@ -67,7 +67,7 @@ h1 {
 }
 
 h2 {
-  margin: auto;
+  margin: 20px auto 0px;
   text-align: center;
 }
 
@@ -110,6 +110,7 @@ button {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 100px;
 }
 
 #static {

@@ -1,4 +1,4 @@
-export function calculateInvestment() {
+export function calculateInvestmentComparison() {
     const startingAmount = document.getElementById('starting-amount').value;
     const regularDeposit = document.getElementById('regular-deposit').value;
     const depositFrequency = document.getElementById('deposit-frequency').value;
@@ -14,26 +14,13 @@ export function calculateInvestment() {
         annualInvestment = regularDeposit * 52;
         const contributionTotal = annualInvestment * (Math.pow(1 + (growthRate / 100), investmentTerm) - 1) / (growthRate / 100);
         total = initialTotal + contributionTotal;
-        console.log(amount);
-        if (amount != null ) {
-            amount.innerHTML = `Investing $${regularDeposit} ${depositFrequency}, over ${investmentTerm} years with a 
-            ${growthRate}% growth rate will result in a nest egg of $${Math.round(total)}.`;
-        }
     } else if (depositFrequency == 'fortnightly') {
         annualInvestment = regularDeposit * 26;
         const contributionTotal = annualInvestment * (Math.pow(1 + (growthRate / 100), investmentTerm) - 1) / (growthRate / 100);
         total = initialTotal + contributionTotal;
-        if (amount != null) {
-            amount.innerHTML = `Investing $${regularDeposit} ${depositFrequency}, over ${investmentTerm} years with a 
-            ${growthRate}% growth rate will result in a nest egg of $${Math.round(total)}.`;
-        }
     } else if (depositFrequency == 'monthly') {
         annualInvestment = regularDeposit * 12;
         const contributionTotal = annualInvestment * (Math.pow(1 + (growthRate / 100), investmentTerm) - 1) / (growthRate / 100);
-        total = initialTotal + contributionTotal;
-        if (amount != null) {
-            amount.innerHTML = `Investing $${regularDeposit} ${depositFrequency}, over ${investmentTerm} years with a 
-            ${growthRate}% growth rate will result in a nest egg of $${Math.round(total)}.`;
-        }        
+        total = initialTotal + contributionTotal;     
     };
 }

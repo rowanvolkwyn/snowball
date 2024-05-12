@@ -22,7 +22,7 @@ function Investment() {
                 <button type="button" onClick={calculateInvestment}>Calculate</button>
             </form>
             <div id="results">
-                <h2 id="amount">Amount</h2>
+                <h2 id="amount"></h2>
             </div>
         </div>
     );

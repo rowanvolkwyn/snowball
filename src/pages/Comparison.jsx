@@ -1,4 +1,3 @@
-import { calculateRepayment } from "../javascript/calculateRepayment";
 import { calculateTotalNetWorth } from "../javascript/calculateTotalNetWorth";
 import { updatePercentage } from "../javascript/updatePercentage";
 
@@ -49,12 +48,12 @@ function Comparison() {
             </form>
             <div id='net-worth-results'>
                 <div id='static'>
-                    <p>Mortgage Repayment:</p>
-                    <p>Extra Repayment:</p>
-                    <p>Time to Payoff:</p>
-                    <p>Weekly Investing:</p>
-                    <p>Weekly Investing after Mortgage:</p>
-                    <p><strong>Total Net Worth: </strong></p>
+                    <p id='repayment-static'></p>
+                    <p id='extra-repayment-static'></p>
+                    <p id='time-to-payoff-static'></p>
+                    <p id='regular-investment-static'></p>
+                    <p id='extra-investment-static'></p>
+                    <p><strong id='net-worth-static'></strong></p>
                 </div>
                 <div id='dynamic'>
                     <p id='repayment'></p>
@@ -65,7 +64,6 @@ function Comparison() {
                     <p><strong id='net-worth'></strong></p>
                 </div>
             </div>
-            <h2 id="amount"></h2>
         </div>
     );
 }
