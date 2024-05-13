@@ -11,14 +11,14 @@ function Complex() {
                 <input type="number" id="loan-term" name="loan-term" max='50' required />
                 <label htmlFor="interest-rate">Interest Rate:</label>
                 <input type="number" id="interest-rate" name="interest-rate" max='20' required />
+                <label htmlFor="extra-payment">Extra Payments:</label>
+                <input type="number" id="extra-payment" name="iextra-payment" max='20' required />
                 <label htmlFor="repayment-frequency">Repayment Frequency:</label>
-                <select id="repayment-frequency" name="repayment-frequency" required >
+                <select id="repayment-frequency" name="repayment-frequency" onChange={calculateExtraRepayments} required >
                     <option value="weekly">Weekly</option>
                     <option value="fortnightly">Fortnightly</option>
                     <option value="monthly">Monthly</option>
                 </select>
-                <label htmlFor="extra-payment">Extra Payments:</label>
-                <input type="number" id="extra-payment" name="iextra-payment" max='20' required />
                 <button type="button" onClick={calculateExtraRepayments}>Calculate</button>
             </form>
             <div id="results">

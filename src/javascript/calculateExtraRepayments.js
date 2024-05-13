@@ -49,7 +49,7 @@ export function calculateExtraRepayments() {
            const weeks = 2 * Math.round((numerator/denominator) % 26);
     
            // Update the DOM
-           amount.innerHTML = `By paying $${extraPayment} extra per week, your loan will be repayed in ${years} 
+           amount.innerHTML = `By paying $${extraPayment} extra per fortnight, your loan will be repayed in ${years} 
            years and ${weeks} weeks instead of ${loanTerm} years.`;
         } else if (repaymentFrequency == 'monthly') {
            // Original Repayment
